@@ -142,7 +142,7 @@ with col3:
 # --- PIE DE PÁGINA ---
 st.markdown("---")
 st.markdown("""
-🌈 **Taylor’s AI Universe** — un proyecto por *Migue*,  
-combinando Inteligencia Artificial, visión, voz y emoción.  
+🌈 **Taylor’s App Universe** — un proyecto por *Migue*,  
+combinando, visión, voz y emoción.  
 *"Cause darling, I’m a mastermind."* 💛  
 """)
