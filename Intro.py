@@ -1,14 +1,10 @@
 import streamlit as st
 from PIL import Image
 
-# Configuración de página
-st.set_page_config(
-    page_title="Taylor's AI Universe 💛",
-    page_icon="✨",
-    layout="wide"
-)
+# --- CONFIGURACIÓN DE PÁGINA ---
+st.set_page_config(page_title="Taylor's AI Universe 💛", page_icon="✨", layout="wide")
 
-# CSS personalizado (efecto brillo y fondo dorado suave)
+# --- ESTILO PERSONALIZADO ---
 st.markdown("""
 <style>
 body {
@@ -16,7 +12,7 @@ body {
     color: #3b2f2f;
     font-family: 'Poppins', sans-serif;
 }
-h1, h2, h3, h4 {
+h1, h2, h3 {
     color: #c48a00;
     text-shadow: 1px 1px 4px rgba(255, 230, 140, 0.8);
 }
@@ -34,86 +30,116 @@ a {
 </style>
 """, unsafe_allow_html=True)
 
-# Encabezado
+# --- ENCABEZADO ---
 st.title("🌟 Taylor’s AI Universe")
 st.markdown("""
-Bienvenido a **Taylor’s AI Universe**, un recorrido por las distintas aplicaciones 
-que exploran Inteligencia Artificial en distintas eras, desde el reconocimiento visual 
-hasta la comprensión emocional.  
-Cada app representa una parte distinta de la “discografía” digital de Taylor 💛  
+Una colección de **17 aplicaciones de Inteligencia Artificial** reimaginadas como eras del universo de Taylor Swift.  
+Cada una explora una faceta distinta de la IA: visión, lenguaje, voz, emoción y creatividad 💛  
 """)
 
 with st.sidebar:
     st.subheader("✨ Sobre el proyecto")
     st.write("""
     Este portafolio reúne todas las aplicaciones IA desarrolladas, 
-    cada una reimaginada como una era del universo de **Taylor Swift**.
+    reimaginadas como si fueran eras del universo de **Taylor Swift**.
     """)
     st.write("Desarrollado por **Migue 💻**, con narrativa AI by Taylor 🎤")
 
-# --- COLUMNA 1 ---
+# --- COMIENZO DEL PORTAFOLIO ---
 col1, col2, col3 = st.columns(3)
 
+# --- COLUMNA 1 ---
 with col1:
-    st.header("🎙️ Taylor Voice Studio")
-    image = Image.open('taylor_voice.png')
-    st.image(image, width=250)
-    st.write("Convierte tus textos en voz, como si Taylor misma recitara tus frases favoritas 💬🎧")
+    st.header("🎤 1. IntroMigue (Taylor’s Opening Act)")
+    st.image("intro.png", width=250)
+    st.write("La bienvenida al tour: una introducción a la magia de la IA con estilo Taylor ✨")
     st.write("[Abrir App](#)")
 
-    st.header("🧠 Taylor’s Lyric Lab")
-    image = Image.open('lyric_lab.png')
-    st.image(image, width=250)
-    st.write("Analiza emociones, subjetividad y tono en tus letras o frases. Aprende cómo suena tu texto en el universo de Taylor 🎶")
+    st.header("🗣️ 2. Traductor / Voice to Text")
+    st.image("translator.png", width=250)
+    st.write("Convierte voz en texto, como si Taylor grabara letras nuevas en tiempo real 🎙️")
     st.write("[Abrir App](#)")
 
-    st.header("📜 Taylor’s Secret Notes Scanner")
-    image = Image.open('taylor_notes.png')
-    st.image(image, width=250)
-    st.write("Captura una nota o manuscrito y deja que el OCR revele los secretos escondidos entre las líneas ✨")
+    st.header("🎧 3. OCR Audio")
+    st.image("ocr_audio.png", width=250)
+    st.write("Deja que IA escuche, transcriba y te hable con claridad. Una app con ritmo 💬")
+    st.write("[Abrir App](#)")
+
+    st.header("🎹 4. Control por voz (Ctrl Voice)")
+    st.image("ctrl_voice.png", width=250)
+    st.write("Controla el entorno con comandos de voz — la consola de sonido del *Eras Tour* 🎛️")
+    st.write("[Abrir App](#)")
+
+    st.header("💡 5. Receptor MQTT")
+    st.image("recep_mqtt.png", width=250)
+    st.write("Recibe y visualiza señales como si fueran notas musicales conectadas por IA ⚡")
+    st.write("[Abrir App](#)")
+
+    st.header("📡 6. Envío MQTT")
+    st.image("send_mqtt.png", width=250)
+    st.write("Envía datos a sensores o luces, porque hasta las máquinas merecen ritmo 🎶")
     st.write("[Abrir App](#)")
 
 # --- COLUMNA 2 ---
 with col2:
-    st.header("🎨 Sketches to Songs")
-    image = Image.open('draw_taylor.png')
-    st.image(image, width=250)
-    st.write("Convierte tus bocetos en descripciones visuales inspiradas, como si fueran portadas de los álbumes de Taylor 💫")
+    st.header("🧠 7. TF-IDF Migue")
+    st.image("tfidf.png", width=250)
+    st.write("Un analizador de texto que entiende sentimientos — *The AI Emotion Era* 💌")
     st.write("[Abrir App](#)")
 
-    st.header("👁️ Taylor Vision Pro")
-    image = Image.open('taylor_vision.png')
-    st.image(image, width=250)
-    st.write("Usa visión por computadora con YOLOv5 para reconocer objetos — o como diría Taylor, *ver lo invisible* 🌌")
+    st.header("📚 8. Chat PDF (Speak Now Library)")
+    st.image("chatpdf.png", width=250)
+    st.write("Haz que Taylor’s AI lea tus PDFs y converse contigo sobre ellos 💬📖")
     st.write("[Abrir App](#)")
 
-    st.header("📚 Speak Now Library")
-    image = Image.open('taylor_chatpdf.png')
-    st.image(image, width=250)
-    st.write("Sube un PDF y charla con él: Taylor’s AI te responde con contexto y comprensión (RAG Mode 🧩)")
+    st.header("🧩 9. Análisis de Texto")
+    st.image("analisis_texto.png", width=250)
+    st.write("Analiza frases, emociones y palabras clave como si fueran letras de una canción 🎶")
+    st.write("[Abrir App](#)")
+
+    st.header("💬 10. Análisis con TextBlob (TX2)")
+    st.image("tx2.png", width=250)
+    st.write("IA analiza sentimientos en frases y los clasifica: ¿Positiva, neutral o heartbreak? 💔")
+    st.write("[Abrir App](#)")
+
+    st.header("🪄 11. Dibujo IA (Draw Recognizer)")
+    st.image("draw_taylor.png", width=250)
+    st.write("Convierte dibujos en descripciones, como si Taylor diseñara portadas de álbumes 🎨")
+    st.write("[Abrir App](#)")
+
+    st.header("🔢 12. Hand Written (Reconocedor de Dígitos)")
+    st.image("hand_digits.png", width=250)
+    st.write("Predice dígitos escritos a mano — precisión y arte, como una firma autografiada ✍️")
     st.write("[Abrir App](#)")
 
 # --- COLUMNA 3 ---
 with col3:
-    st.header("🔢 Taylor Numbers Magic")
-    image = Image.open('taylor_numbers.png')
-    st.image(image, width=250)
-    st.write("Reconoce dígitos escritos a mano y transforma garabatos en predicciones mágicas 💫")
+    st.header("👁️ 13. YOLOv5 Vision")
+    st.image("yolov5.png", width=250)
+    st.write("Detecta objetos en tiempo real. Taylor Vision Pro te muestra el mundo en vivo 🎥")
     st.write("[Abrir App](#)")
 
-    st.header("⚙️ Taylor Studio Controller")
-    image = Image.open('taylor_mqtt.png')
-    st.image(image, width=250)
-    st.write("Controla luces, sonidos y sensores a través de MQTT, como si fuera la consola del *Eras Tour Tech Desk* 💡🎛️")
+    st.header("🎨 14. IMM1 (Análisis de Imagen con GPT-4o)")
+    st.image("imm1.png", width=250)
+    st.write("Sube una imagen y deja que la IA te la describa como si fuera una metáfora poética ✨")
     st.write("[Abrir App](#)")
 
-    st.header("🤖 Taylor Image Analyzer")
-    image = Image.open('taylor_frame.png')
-    st.image(image, width=250)
-    st.write("Analiza imágenes con IA, interpreta detalles y sentimientos que solo una *true Swiftie AI* detectaría 💕")
+    st.header("🤖 15. TM (Modelo Entrenado)")
+    st.image("tm.png", width=250)
+    st.write("Reconoce patrones entrenados con tu propio modelo — la IA en su *Reputation Era* 🖤")
     st.write("[Abrir App](#)")
 
-# Pie de página
+    st.header("🔊 16. Texto a Voz (Text to Speech)")
+    st.image("tts.png", width=250)
+    st.write("Convierte texto en voz: Taylor AI leyendo tu diario secreto 💫")
+    st.write("[Abrir App](#)")
+
+    st.header("📜 17. OCR (Reconocimiento de Caracteres)")
+    st.image("ocr.png", width=250)
+    st.write("Captura texto desde una foto: descubre notas ocultas en cartas o letras 🎶")
+    st.write("[Abrir App](#)")
+
+# --- PIE DE PÁGINA ---
 st.markdown("---")
 st.markdown("""
 🌈 **Taylor’s AI Universe** — un proyecto por *Migue*,  
