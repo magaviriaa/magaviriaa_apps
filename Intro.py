@@ -1,87 +1,122 @@
 import streamlit as st
 from PIL import Image
-st.title("Aplicaciones de Inteligencia Artificial.")
+
+# Configuración de página
+st.set_page_config(
+    page_title="Taylor's AI Universe 💛",
+    page_icon="✨",
+    layout="wide"
+)
+
+# CSS personalizado (efecto brillo y fondo dorado suave)
+st.markdown("""
+<style>
+body {
+    background: radial-gradient(circle at 20% 20%, #fff8e7, #ffe89d, #f5d06f);
+    color: #3b2f2f;
+    font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3, h4 {
+    color: #c48a00;
+    text-shadow: 1px 1px 4px rgba(255, 230, 140, 0.8);
+}
+img {
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 215, 100, 0.6);
+}
+a {
+    color: #b07a00 !important;
+    font-weight: bold;
+}
+.block-container {
+    padding-top: 2rem;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# Encabezado
+st.title("🌟 Taylor’s AI Universe")
+st.markdown("""
+Bienvenido a **Taylor’s AI Universe**, un recorrido por las distintas aplicaciones 
+que exploran Inteligencia Artificial en distintas eras, desde el reconocimiento visual 
+hasta la comprensión emocional.  
+Cada app representa una parte distinta de la “discografía” digital de Taylor 💛  
+""")
 
 with st.sidebar:
-  st.subheader("Aplicaciones con Inteligencia Artificial.")
-  parrafo = (
-    "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
-    "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
-    "resulta en una mayor eficiencia y precisión en diversos campos."
-  )
-  st.write(parrafo)
+    st.subheader("✨ Sobre el proyecto")
+    st.write("""
+    Este portafolio reúne todas las aplicaciones IA desarrolladas, 
+    cada una reimaginada como una era del universo de **Taylor Swift**.
+    """)
+    st.write("Desarrollado por **Migue 💻**, con narrativa AI by Taylor 🎤")
 
-url_ia="https://sites.google.com/view/aplicacionesdeia/inicio"
-st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
-st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
+# --- COLUMNA 1 ---
 col1, col2, col3 = st.columns(3)
 
 with col1:
- 
- st.subheader("Conversión de texto a voz")
- image = Image.open('txt_to_audio2.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace usaremos una de las aplicaciones de Inteligencia Artificial") 
- url = "https://imultimod.streamlit.app/"
- st.write(f"Texto a voz: [Enlace]({url})")
+    st.header("🎙️ Taylor Voice Studio")
+    image = Image.open('taylor_voice.png')
+    st.image(image, width=250)
+    st.write("Convierte tus textos en voz, como si Taylor misma recitara tus frases favoritas 💬🎧")
+    st.write("[Abrir App](#)")
 
- st.subheader("Reconocimiento de Objetos")
- image = Image.open('txt_to_audio.png')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como se detectan objetos en Imágenes.") 
- url = "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/"
- st.write(f"YOLO: [Enlace]({url})")
+    st.header("🧠 Taylor’s Lyric Lab")
+    image = Image.open('lyric_lab.png')
+    st.image(image, width=250)
+    st.write("Analiza emociones, subjetividad y tono en tus letras o frases. Aprende cómo suena tu texto en el universo de Taylor 🎶")
+    st.write("[Abrir App](#)")
 
- st.subheader("Entrenando Modelos")
- image = Image.open('OIG5.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como puedes usar tu modelo entrenado.") 
- url = "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/"
- st.write(f"YOLO: [Enlace]({url})")
+    st.header("📜 Taylor’s Secret Notes Scanner")
+    image = Image.open('taylor_notes.png')
+    st.image(image, width=250)
+    st.write("Captura una nota o manuscrito y deja que el OCR revele los secretos escondidos entre las líneas ✨")
+    st.write("[Abrir App](#)")
 
-with col2: 
- st.subheader("Conversión de voz a texto")
- image = Image.open('OIG8.jpg')
- st.image(image, width=200)
- st.write("En la siguiente veremos una aplicación que usa la conversión de voz a texto.") 
- url = "https://traductor-ab0sp9f6fi.streamlit.app/"
- st.write(f"Voz a texto: [Enlace]({url})")
+# --- COLUMNA 2 ---
+with col2:
+    st.header("🎨 Sketches to Songs")
+    image = Image.open('draw_taylor.png')
+    st.image(image, width=250)
+    st.write("Convierte tus bocetos en descripciones visuales inspiradas, como si fueran portadas de los álbumes de Taylor 💫")
+    st.write("[Abrir App](#)")
 
- st.subheader("Análisis de Datos")
- image = Image.open('data_analisis.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace veremos como se pueden analizar datos usando agentes.") 
- url = "https://asistpy-csv.streamlit.app/"
- st.write(f"Datos: [Enlace]({url})")
+    st.header("👁️ Taylor Vision Pro")
+    image = Image.open('taylor_vision.png')
+    st.image(image, width=250)
+    st.write("Usa visión por computadora con YOLOv5 para reconocer objetos — o como diría Taylor, *ver lo invisible* 🌌")
+    st.write("[Abrir App](#)")
 
- st.subheader("Trasnscriptor Audio y Video")
- image = Image.open('OIG3.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como realizamos transcripciones de audio/video.") 
- url = "https://transcript-whisper.streamlit.app/"
- st.write(f"Transcriptor: [Enlace]({url})")
+    st.header("📚 Speak Now Library")
+    image = Image.open('taylor_chatpdf.png')
+    st.image(image, width=250)
+    st.write("Sube un PDF y charla con él: Taylor’s AI te responde con contexto y comprensión (RAG Mode 🧩)")
+    st.write("[Abrir App](#)")
 
+# --- COLUMNA 3 ---
+with col3:
+    st.header("🔢 Taylor Numbers Magic")
+    image = Image.open('taylor_numbers.png')
+    st.image(image, width=250)
+    st.write("Reconoce dígitos escritos a mano y transforma garabatos en predicciones mágicas 💫")
+    st.write("[Abrir App](#)")
 
-with col3: 
- st.subheader("Generación en Contexto")
- image = Image.open('Chat_pdf.png')
- st.image(image, width=190)
- st.write("En la siguiente veremos una aplicación que usa RAG a partir de un documento (PDF).") 
- url = "https://chatpdf-cc.streamlit.app/"
- st.write(f"RAG: [Enlace]({url})")
+    st.header("⚙️ Taylor Studio Controller")
+    image = Image.open('taylor_mqtt.png')
+    st.image(image, width=250)
+    st.write("Controla luces, sonidos y sensores a través de MQTT, como si fuera la consola del *Eras Tour Tech Desk* 💡🎛️")
+    st.write("[Abrir App](#)")
 
- st.subheader("Análisis de Imagen")
- image = Image.open('OIG4.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de análisis en Imágenes.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
- 
- st.subheader("Sistema Ciberfísico")
- image = Image.open('OIG6.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de interacción con el mundo físico.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
+    st.header("🤖 Taylor Image Analyzer")
+    image = Image.open('taylor_frame.png')
+    st.image(image, width=250)
+    st.write("Analiza imágenes con IA, interpreta detalles y sentimientos que solo una *true Swiftie AI* detectaría 💕")
+    st.write("[Abrir App](#)")
 
-
+# Pie de página
+st.markdown("---")
+st.markdown("""
+🌈 **Taylor’s AI Universe** — un proyecto por *Migue*,  
+combinando Inteligencia Artificial, visión, voz y emoción.  
+*"Cause darling, I’m a mastermind."* 💛  
+""")
