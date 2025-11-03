@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 
 # --- CONFIGURACIÓN DE PÁGINA ---
-st.set_page_config(page_title="Taylor's AI Universe 💛", page_icon="✨", layout="wide")
+st.set_page_config(page_title="Taylor's App Universe 💛", page_icon="✨", layout="wide")
 
 # --- ESTILO PERSONALIZADO ---
 st.markdown("""
@@ -31,19 +31,19 @@ a {
 """, unsafe_allow_html=True)
 
 # --- ENCABEZADO ---
-st.title("🌟 Taylor’s AI Universe")
+st.title("🌟 Taylor’s App Universe")
 st.markdown("""
-Una colección de **17 aplicaciones de Inteligencia Artificial** reimaginadas como eras del universo de Taylor Swift.  
-Cada una explora una faceta distinta de la IA: visión, lenguaje, voz, emoción y creatividad 💛  
+Una colección de **17 aplicaciones** reimaginadas como eras del universo de Taylor Swift.  
+Cada una explora una faceta distinta: visión, lenguaje, voz, emoción y creatividad 💛  
 """)
 
 with st.sidebar:
     st.subheader("✨ Sobre el proyecto")
     st.write("""
-    Este portafolio reúne todas las aplicaciones IA desarrolladas, 
+    Este portafolio reúne todas las aplicaciones desarrolladas, 
     reimaginadas como si fueran eras del universo de **Taylor Swift**.
     """)
-    st.write("Desarrollado por **Migue 💻**, con narrativa AI by Taylor 🎤")
+    st.write("Desarrollado por **Migue 💻**, con narrativa by Taylor 🎤")
 
 # --- COMIENZO DEL PORTAFOLIO ---
 col1, col2, col3 = st.columns(3)
@@ -52,7 +52,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.header("🎤 1. IntroMigue (Taylor’s Opening Act)")
     st.image("intro.png", width=250)
-    st.write("La bienvenida al tour: una introducción a la magia de la IA con estilo Taylor ✨")
+    st.write("La bienvenida al tour: una introducción a la magia con estilo Taylor ✨")
     st.write("[Abrir App](#)")
 
     st.header("🗣️ 2. Traductor / Voice to Text")
@@ -62,7 +62,7 @@ with col1:
 
     st.header("🎧 3. OCR Audio")
     st.image("ocr_audio.png", width=250)
-    st.write("Deja que IA escuche, transcriba y te hable con claridad. Una app con ritmo 💬")
+    st.write("Deja que escuche, transcriba y te hable con claridad. Una app con ritmo 💬")
     st.write("[Abrir App](#)")
 
     st.header("🎹 4. Control por voz (Ctrl Voice)")
@@ -72,7 +72,7 @@ with col1:
 
     st.header("💡 5. Receptor MQTT")
     st.image("recep_mqtt.png", width=250)
-    st.write("Recibe y visualiza señales como si fueran notas musicales conectadas por IA ⚡")
+    st.write("Recibe y visualiza señales como si fueran notas musicales conectadas ⚡")
     st.write("[Abrir App](#)")
 
     st.header("📡 6. Envío MQTT")
@@ -84,12 +84,12 @@ with col1:
 with col2:
     st.header("🧠 7. TF-IDF Migue")
     st.image("tfidf.png", width=250)
-    st.write("Un analizador de texto que entiende sentimientos — *The AI Emotion Era* 💌")
+    st.write("Un analizador de texto que entiende sentimientos — *The Emotion Era* 💌")
     st.write("[Abrir App](#)")
 
     st.header("📚 8. Chat PDF (Speak Now Library)")
     st.image("chatpdf.png", width=250)
-    st.write("Haz que Taylor’s AI lea tus PDFs y converse contigo sobre ellos 💬📖")
+    st.write("Haz que Taylor’s Read lea tus PDFs y converse contigo sobre ellos 💬📖")
     st.write("[Abrir App](#)")
 
     st.header("🧩 9. Análisis de Texto")
@@ -99,10 +99,10 @@ with col2:
 
     st.header("💬 10. Análisis con TextBlob (TX2)")
     st.image("tx2.png", width=250)
-    st.write("IA analiza sentimientos en frases y los clasifica: ¿Positiva, neutral o heartbreak? 💔")
+    st.write("Analiza sentimientos en frases y los clasifica: ¿Positiva, neutral o heartbreak? 💔")
     st.write("[Abrir App](#)")
 
-    st.header("🪄 11. Dibujo IA (Draw Recognizer)")
+    st.header("🪄 11. Dibujo (Draw Recognizer)")
     st.image("draw_taylor.png", width=250)
     st.write("Convierte dibujos en descripciones, como si Taylor diseñara portadas de álbumes 🎨")
     st.write("[Abrir App](#)")
@@ -121,17 +121,17 @@ with col3:
 
     st.header("🎨 14. IMM1 (Análisis de Imagen con GPT-4o)")
     st.image("imm1.png", width=250)
-    st.write("Sube una imagen y deja que la IA te la describa como si fuera una metáfora poética ✨")
+    st.write("Sube una imagen y deja que te la describa como si fuera una metáfora poética ✨")
     st.write("[Abrir App](#)")
 
     st.header("🤖 15. TM (Modelo Entrenado)")
     st.image("tm.png", width=250)
-    st.write("Reconoce patrones entrenados con tu propio modelo — la IA en su *Reputation Era* 🖤")
+    st.write("Reconoce patrones entrenados con tu propio modelo — en su *Midnights Era* 🖤")
     st.write("[Abrir App](#)")
 
     st.header("🔊 16. Texto a Voz (Text to Speech)")
     st.image("tts.png", width=250)
-    st.write("Convierte texto en voz: Taylor AI leyendo tu diario secreto 💫")
+    st.write("Convierte texto en voz: Taylor leyendo tu diario secreto 💫")
     st.write("[Abrir App](#)")
 
     st.header("📜 17. OCR (Reconocimiento de Caracteres)")
